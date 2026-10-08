@@ -1,21 +1,41 @@
 ملفات الشهادات / Certificate files
 =====================================
-ضع ملف PDF لكل شهادة في هذا المجلد بالاسم المقابل لها (الاسم بالأحرف الصغيرة كما هو).
-إن كان للشهادة رابط Credly أو Coursera فضعه في index.html داخل window.CERT_LINKS بدل رفع الملف.
+ضع ملف PDF لكل شهادة في هذا المجلد بالاسم المقابل لها (بالأحرف الصغيرة كما هو).
+إن كان للشهادة رابط فضعه في index.html داخل window.CERT_LINKS بدل رفع الملف.
+إن كانت الشهادة صورة (jpg/png) فاكتب مسارها في CERT_LINKS، مثل: "ccna": "assets/certs/ccna.jpg"
 
-ccna.pdf   <-  CCNA — Cisco Certified Network Associate
-pmp-project-control.pdf   <-  PMP – Planning and Project Control Essential
-itil-foundation.pdf   <-  ITIL Foundation
-excel-data-analysis.pdf   <-  Excel Basics for Data Analysis
-ethical-hacking-essentials.pdf   <-  Ethical Hacking Essentials
-fortigate-administrator.pdf   <-  FortiGate Administrator
-azure-services.pdf   <-  Introduction to Microsoft Azure Services
-ibm-scrum-master.pdf   <-  IBM IT Scrum Master (Diploma)
-google-it-support.pdf   <-  Google IT Support (Diploma)
-fortinet-fca.pdf   <-  FCA — Fortinet Certified Associate
-fortinet-fcf.pdf   <-  FCF — Fortinet Certified Fundamentals
-oracle-cloud-data-management.pdf   <-  Oracle Cloud Data Management
-mcsa.pdf   <-  MCSA — Microsoft Certified Solutions Associate
-cisco-iot.pdf   <-  Introduction to Internet of Things
-cisco-cybersecurity.pdf   <-  Introduction to Cybersecurity
-icdl.pdf   <-  ICDL — International Computer Driving License
+الاسم.pdf   <-  عنوان الشهادة   [التصنيف]
+-------------------------------------
+ccna.pdf   <-  CCNA — Cisco Certified Network Associate   [شبكات وأمن]
+ccna-200-301.pdf   <-  CCNA 200-301   [شبكات وأمن]
+itil-v4-intro.pdf   <-  Introduction to ITIL v4   [دعم وإدارة]
+pmp-project-control.pdf   <-  PMP – Planning and Project Control Essential   [دعم وإدارة]
+itil-foundation.pdf   <-  ITIL Foundation   [دعم وإدارة]
+excel-data-analysis.pdf   <-  Excel Basics for Data Analysis   [أنظمة وسحابة وبيانات]
+ethical-hacking-essentials.pdf   <-  Ethical Hacking Essentials   [شبكات وأمن]
+fortigate-administrator.pdf   <-  FortiGate Administrator   [شبكات وأمن]
+azure-services.pdf   <-  Introduction to Microsoft Azure Services   [أنظمة وسحابة وبيانات]
+ibm-agile-scrum-intro.pdf   <-  Introduction to Agile Development and Scrum   [دعم وإدارة]
+scrum-master-capstone.pdf   <-  Scrum Master Capstone   [دعم وإدارة]
+working-as-scrum-master.pdf   <-  Working as a Scrum Master   [دعم وإدارة]
+ibm-scrum-master.pdf   <-  IBM IT Scrum Master (Diploma)   [دعم وإدارة]
+ibm-devops-essentials.pdf   <-  DevOps Essentials   [أنظمة وسحابة وبيانات]
+ibm-it-fundamentals.pdf   <-  IT Fundamentals for Everyone   [دعم وإدارة]
+ibm-software-engineering-essentials.pdf   <-  Software Engineering Essentials   [أنظمة وسحابة وبيانات]
+intro-scrum-master.pdf   <-  Introduction to Scrum Master   [دعم وإدارة]
+google-it-support.pdf   <-  Google IT Support (Diploma)   [دعم وإدارة]
+fortinet-getting-started-cybersecurity.pdf   <-  Getting Started in Cybersecurity 2.0   [شبكات وأمن]
+fortinet-threat-landscape.pdf   <-  Introduction to the Threat Landscape 2.0   [شبكات وأمن]
+fortinet-fca.pdf   <-  FCA — Fortinet Certified Associate   [شبكات وأمن]
+fortigate-74-operator.pdf   <-  Fortinet FortiGate 7.4 Operator   [شبكات وأمن]
+fortinet-fcf.pdf   <-  FCF — Fortinet Certified Fundamentals   [شبكات وأمن]
+oracle-cloud-data-management.pdf   <-  Oracle Cloud Data Management   [أنظمة وسحابة وبيانات]
+leadership-skills.pdf   <-  Development of Leadership Skills   [تطوير مهني]
+mcsa.pdf   <-  MCSA — Microsoft Certified Solutions Associate   [أنظمة وسحابة وبيانات]
+cisco-iot.pdf   <-  Introduction to Internet of Things   [شبكات وأمن]
+cisco-cybersecurity.pdf   <-  Introduction to Cybersecurity   [شبكات وأمن]
+mobile-maintenance-diploma.pdf   <-  Diploma, Mobile Maintenance & Programming   [تطوير مهني]
+icdl.pdf   <-  ICDL — International Computer Driving License   [دعم وإدارة]
+thinking-skills.pdf   <-  Thinking Skills   [تطوير مهني]
+communication-skills.pdf   <-  Communication Skills   [تطوير مهني]
+accounting-a.pdf   <-  Accounting (A)   [تطوير مهني]
