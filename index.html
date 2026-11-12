@@ -1286,6 +1286,30 @@ dialog.req-dialog{max-height:calc(100dvh - 16px)}
 .req-grid{gap:8px}
 .req-submit{width:100%}
 }
+/* Mobile request form: two-column essentials, shorter fields, no unnecessary scrolling */
+@media (max-width:640px){
+  .req-box{padding:14px 14px 12px;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+  .req-head{padding-inline-end:42px}
+  .req-head h3{font-size:1.12rem;line-height:1.35;margin:3px 0 5px}
+  .req-head p{display:none}
+  .req-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 10px}
+  .req-f{gap:4px}
+  .req-f.full{grid-column:1/-1}
+  .req-f label,.req-lbl{font-size:.76rem;line-height:1.35}
+  .req-f input[type=text],.req-f input[type=email],.req-f input[type=tel],.req-f select{min-height:42px;padding:7px 9px;font-size:16px}
+  .req-f textarea{height:64px;min-height:64px;padding:8px 10px;font-size:16px}
+  .req-files{padding:7px 9px;gap:8px}
+  .req-pick{padding:8px 12px}
+  .req-hint{font-size:.72rem;line-height:1.4}
+  .req-status{margin:6px 0 0;font-size:.82rem}
+  .req-actions{margin-top:8px;gap:8px}
+  .req-submit{width:100%;min-height:44px;padding:9px 16px}
+}
+@media (max-width:360px){
+  .req-box{padding-inline:11px}
+  .req-grid{gap:7px 8px}
+  .req-f label{font-size:.72rem}
+}
 </style></head>
 <body>
 <a class="skip-link" data-ar="تخطي إلى المحتوى" data-en="Skip to content" href="#intro">تخطي إلى المحتوى</a>
