@@ -2874,17 +2874,17 @@ update();
 <p data-ar="عبّئ بياناتك وتفاصيل المشروع، وسيصل الطلب مباشرة إلى بريدي الإلكتروني بشكل مرتب." data-en="Fill in your details and project info — the request reaches my email directly, neatly organised.">عبّئ بياناتك وتفاصيل المشروع، وسيصل الطلب مباشرة إلى بريدي الإلكتروني بشكل مرتب.</p>
 </div>
 <div class="req-grid">
-<div class="req-f"><label data-ar="الاسم" data-en="Name" for="req-name">الاسم</label><input autocomplete="name" dir="auto" id="req-name" maxlength="80" name="name" type="text"/></div>
-<div class="req-f"><label data-ar="البريد الإلكتروني" data-en="Email" for="req-email">البريد الإلكتروني</label><input autocomplete="email" dir="ltr" id="req-email" inputmode="email" maxlength="120" name="email" type="email"/></div>
+<div class="req-f"><label data-ar="الاسم" data-en="Name" for="req-name">الاسم</label><input autocomplete="name" dir="auto" id="req-name" aria-required="true" maxlength="80" name="name" type="text"/></div>
+<div class="req-f"><label data-ar="البريد الإلكتروني" data-en="Email" for="req-email">البريد الإلكتروني</label><input autocomplete="email" dir="ltr" id="req-email" aria-required="true" inputmode="email" maxlength="120" name="email" type="email"/></div>
 <div class="req-f"><label data-ar="رقم الجوال / واتساب (اختياري)" data-en="Mobile / WhatsApp (optional)" for="req-phone">رقم الجوال / واتساب (اختياري)</label><input autocomplete="tel" dir="ltr" id="req-phone" inputmode="tel" maxlength="30" name="phone" type="tel"/></div>
 <div class="req-f"><label data-ar="الخدمة المطلوبة" data-en="Requested service" for="req-service">الخدمة المطلوبة</label>
-<select id="req-service" name="service">
+<select aria-required="true" id="req-service" name="service">
 <option data-ar="اختر الخدمة" data-en="Select a service" value="">اختر الخدمة</option>
 <option data-ar="موقع شخصي" data-en="Personal website" value="موقع شخصي | Personal website">موقع شخصي</option>
 <option data-ar="موقع شخصي + شعار" data-en="Personal website + logo" value="موقع شخصي + شعار | Personal website + logo">موقع شخصي + شعار</option>
 <option data-ar="أخرى / استفسار" data-en="Other / inquiry" value="أخرى / استفسار | Other / inquiry">أخرى / استفسار</option>
 </select></div>
-<div class="req-f full"><label data-ar="تفاصيل المشروع" data-en="Project details" for="req-details">تفاصيل المشروع</label><textarea data-ar-ph="اكتب فكرة الموقع، الأقسام المطلوبة، الألوان، أمثلة تعجبك، وأي متطلبات إضافية." data-en-ph="Describe the website idea, required sections, colors, examples you like, and any extra requirements." dir="auto" id="req-details" maxlength="3000" name="details" placeholder="اكتب فكرة الموقع، الأقسام المطلوبة، الألوان، أمثلة تعجبك، وأي متطلبات إضافية."></textarea></div>
+<div class="req-f full"><label data-ar="تفاصيل المشروع" data-en="Project details" for="req-details">تفاصيل المشروع</label><textarea data-ar-ph="اكتب فكرة الموقع، الأقسام المطلوبة، الألوان، أمثلة تعجبك، وأي متطلبات إضافية." data-en-ph="Describe the website idea, required sections, colors, examples you like, and any extra requirements." dir="auto" id="req-details" aria-required="true" maxlength="3000" name="details" placeholder="اكتب فكرة الموقع، الأقسام المطلوبة، الألوان، أمثلة تعجبك، وأي متطلبات إضافية."></textarea></div>
 <div class="req-f full"><span class="req-lbl" data-ar="المرفقات (اختيارية)" data-en="Attachments (optional)">المرفقات (اختيارية)</span>
 <div class="req-files"><button class="btn btn-b req-pick" id="req-pick" type="button"><span data-ar="اختيار الملفات" data-en="Choose files">اختيار الملفات</span></button><span class="req-count" data-ar="لم يتم اختيار ملفات" data-en="No files selected" id="req-nofiles">لم يتم اختيار ملفات</span><span class="req-count" hidden id="req-filecount"></span></div>
 <input accept=".jpg,.jpeg,.png,.webp,.gif,.pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx,.zip,.rar,.txt" hidden id="req-file" multiple type="file"/>
