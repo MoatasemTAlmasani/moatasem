@@ -419,6 +419,9 @@ font-size:.68rem;color:var(--ink-2);
 background:color-mix(in srgb, var(--line) 42%, transparent);border:1px solid var(--line);
 }
 .work-p{margin:0;color:var(--ink-2);font-size:.8rem;line-height:1.7}
+.work-stack{display:flex;flex-wrap:wrap;gap:7px;margin-top:15px}
+.work-stack span{display:inline-flex;align-items:center;min-height:28px;padding:5px 9px;border:1px solid var(--line-soft);border-radius:7px;background:var(--chip);color:var(--signal);font:500 .68rem/1.35 "IBM Plex Mono","IBM Plex Sans Arabic",sans-serif}
+html[dir="rtl"] .work-stack span{font-family:"IBM Plex Sans Arabic","IBM Plex Mono",sans-serif}
 
 @media (max-width:700px){
 .work-grid{grid-template-columns:1fr}
@@ -1652,6 +1655,7 @@ dialog.req-dialog{max-height:calc(100dvh - 16px)}
 <p class="work-p" data-ar="تصميم شبكة مؤسسية متعددة الطوابق باستخدام طبقات Core وDistribution وAccess، مع تقسيم VLAN والتكرار وInter-VLAN Routing وربط الاتصال بالإنترنت والموقع الإداري." data-en="Designed a multi-floor enterprise network using Core, Distribution, and Access layers, with VLAN segmentation, redundancy, Inter-VLAN Routing, internet uplink, and admin-site connectivity.">
 تصميم شبكة مؤسسية متعددة الطوابق باستخدام طبقات Core وDistribution وAccess، مع تقسيم VLAN والتكرار وInter-VLAN Routing وربط الاتصال بالإنترنت والموقع الإداري.
 </p>
+<div class="work-stack" aria-label="نطاق العمل والتقنيات"><span data-ar="Core / Distribution / Access" data-en="Core / Distribution / Access">Core / Distribution / Access</span><span>VLAN</span><span>Inter-VLAN Routing</span><span data-ar="التكرار الشبكي" data-en="Network Redundancy">التكرار الشبكي</span></div>
 </div>
 <div class="work-card">
 <div class="work-head">
@@ -1662,6 +1666,7 @@ dialog.req-dialog{max-height:calc(100dvh - 16px)}
 </div>
 <span class="work-tag" data-ar="مشروع تعليمي / مختبري" data-en="Academic / Lab Project">مشروع تعليمي / مختبري</span>
 <p class="work-p" data-ar="دراسة وتصميم بنية شبكة واسعة النطاق WAN لربط الفروع بالمقر الرئيسي، مع إعداد VPN من نوع Site-to-Site لتأمين تبادل البيانات وضمان استمرارية الاتصال بين المواقع." data-en="Studying and designing a Wide Area Network (WAN) architecture that links branches to headquarters, with Site-to-Site VPN configuration to secure data exchange and keep sites connected.">دراسة وتصميم بنية شبكة واسعة النطاق WAN لربط الفروع بالمقر الرئيسي، مع إعداد VPN من نوع Site-to-Site لتأمين تبادل البيانات وضمان استمرارية الاتصال بين المواقع.</p>
+<div class="work-stack" aria-label="نطاق العمل والتقنيات"><span>WAN</span><span>Site-to-Site VPN</span><span data-ar="ربط الفروع" data-en="Branch Connectivity">ربط الفروع</span><span data-ar="الاتصال الآمن" data-en="Secure Connectivity">الاتصال الآمن</span></div>
 </div>
 <div class="work-card">
 <div class="work-head">
@@ -1674,6 +1679,7 @@ dialog.req-dialog{max-height:calc(100dvh - 16px)}
 <p class="work-p" data-ar="تدريب عملي على الجدران النارية وتهيئة VPN (Site-to-Site وRemote Access) وتقسيم الشبكات واستكشاف أعطال الأمن." data-en="Hands-on training on firewalls, configuring VPN (Site-to-Site &amp; Remote Access), network segmentation, and security fault troubleshooting.">
 تدريب عملي على الجدران النارية وتهيئة VPN (Site-to-Site وRemote Access) وتقسيم الشبكات واستكشاف أعطال الأمن.
 </p>
+<div class="work-stack" aria-label="نطاق العمل والتقنيات"><span data-ar="الجدران النارية" data-en="Firewalls">الجدران النارية</span><span>Site-to-Site VPN</span><span>Remote Access VPN</span><span data-ar="تقسيم الشبكات" data-en="Network Segmentation">تقسيم الشبكات</span></div>
 </div>
 <div class="work-card">
 <div class="work-head">
@@ -1684,6 +1690,7 @@ dialog.req-dialog{max-height:calc(100dvh - 16px)}
 </div>
 <span class="work-tag" data-ar="خبرة مهنية" data-en="Professional Experience">خبرة مهنية</span>
 <p class="work-p" data-ar="تقديم الدعم الفني للمستخدمين عبر الهاتف والبريد والدردشة ونظام التذاكر ManageEngine ServiceDesk Plus، وفق ممارسات ITIL واتفاقيات مستوى الخدمة (SLA)، مع تصعيد الحالات وتوثيق الحلول." data-en="Providing technical support to users via phone, email, chat and the ManageEngine ServiceDesk Plus ticketing system, following ITIL practices and SLAs, with case escalation and solution documentation.">تقديم الدعم الفني للمستخدمين عبر الهاتف والبريد والدردشة ونظام التذاكر ManageEngine ServiceDesk Plus، وفق ممارسات ITIL واتفاقيات مستوى الخدمة (SLA)، مع تصعيد الحالات وتوثيق الحلول.</p>
+<div class="work-stack" aria-label="نطاق العمل والتقنيات"><span>ManageEngine ServiceDesk Plus</span><span>ITIL</span><span>SLA</span><span data-ar="إدارة التذاكر" data-en="Ticket Management">إدارة التذاكر</span></div>
 </div>
 </div>
 </div>
