@@ -2452,8 +2452,14 @@ applyAria(ar);
 runTerm(lang);
 try{ localStorage.setItem("mh-lang", lang); }catch(e){}
 }
-bAr.addEventListener("click",function(){setLang("ar");});
-bEn.addEventListener("click",function(){setLang("en");});
+function goToLanguage(lang){
+  try{ localStorage.setItem("mh-lang",lang); }catch(e){}
+  var target=lang==="en"?"/en/":"/";
+  if(window.location.pathname!==target){ window.location.assign(target); return; }
+  setLang(lang);
+}
+bAr.addEventListener("click",function(){goToLanguage("ar");});
+bEn.addEventListener("click",function(){goToLanguage("en");});
 
 /* ============ المظهر ============ */
 var icon=document.getElementById("theme-icon");
@@ -2468,10 +2474,11 @@ document.getElementById("theme").addEventListener("click",function(){
 setTheme(document.documentElement.getAttribute("data-theme")==="light" ? "dark" : "light");
 });
 
-var savedTheme=null, savedLang="ar";
-try{ savedTheme = localStorage.getItem("mh-theme"); savedLang = localStorage.getItem("mh-lang") || "ar"; }catch(e){}
+var savedTheme=null;
+var routeLang=/^\/en(?:\/|$)/.test(window.location.pathname)?"en":"ar";
+try{ savedTheme = localStorage.getItem("mh-theme"); }catch(e){}
 if(!savedTheme){ savedTheme = "dark"; }
-setTheme(savedTheme); setLang(savedLang);
+setTheme(savedTheme); setLang(routeLang);
 
 /* ============ قائمة الجوال ============ */
 var menuBtn=document.getElementById("menu-btn"), navEl=document.getElementById("nav"), menuIcon=document.getElementById("menu-icon");
