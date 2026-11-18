@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>حساب Subnet خطوة بخطوة بمثال واضح | معتصم هاشم</title>
+<meta name="description" content="كيف تحسب عنوان الشبكة وعنوان البث وعدد الأجهزة من بادئة CIDR، مع مثال /26 ورابط للحاسبة.">
+<meta name="theme-color" content="#050E15">
+<link rel="canonical" href="https://moatasem.vercel.app/articles/subnetting-step-by-step">
+<meta property="og:type" content="article">
+<meta property="og:title" content="حساب Subnet خطوة بخطوة بمثال واضح | معتصم هاشم">
+<meta property="og:description" content="كيف تحسب عنوان الشبكة وعنوان البث وعدد الأجهزة من بادئة CIDR، مع مثال /26 ورابط للحاسبة.">
+<meta property="og:url" content="https://moatasem.vercel.app/articles/subnetting-step-by-step">
+<meta property="og:image" content="https://moatasem.vercel.app/assets/og-image.jpeg?v=1">
+<meta property="og:locale" content="ar_AR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/shared.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "حساب Subnet خطوة بخطوة بمثال واضح", "description": "كيف تحسب عنوان الشبكة وعنوان البث وعدد الأجهزة من بادئة CIDR، مع مثال /26 ورابط للحاسبة.", "inLanguage": "ar", "datePublished": "2026-11-17", "dateModified": "2026-11-17", "mainEntityOfPage": "https://moatasem.vercel.app/articles/subnetting-step-by-step", "image": "https://moatasem.vercel.app/assets/og-image.jpeg", "author": {"@type": "Person", "name": "معتصم طارق هاشم", "url": "https://moatasem.vercel.app/"}, "publisher": {"@type": "Person", "name": "معتصم طارق هاشم", "url": "https://moatasem.vercel.app/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://moatasem.vercel.app/"}, {"@type": "ListItem", "position": 2, "name": "المقالات", "item": "https://moatasem.vercel.app/articles/"}, {"@type": "ListItem", "position": 3, "name": "حساب Subnet خطوة بخطوة بمثال واضح", "item": "https://moatasem.vercel.app/articles/subnetting-step-by-step"}]}</script>
+<script defer data-domain="moatasem.vercel.app" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">انتقل إلى المحتوى</a>
+<header class="bar"><div class="bar-in"><a class="brand" href="/">معتصم طارق هاشم</a>
+<nav aria-label="التنقل"><a href="/">الرئيسية</a><a href="/articles/" aria-current="page">المقالات</a><a href="/tools/">الأدوات</a><a href="/cheatsheet/">ملف مجاني</a><a href="/#contact">تواصل</a></nav>
+<button class="tbtn" id="tt" type="button" aria-label="تبديل المظهر">◐</button></div></header>
+<main id="main" class="wrap"><article>
+<nav class="meta" aria-label="مسار الصفحة"><a href="/">الرئيسية</a> › <a href="/articles/">المقالات</a></nav>
+<p class="eyebrow">شبكات وأنظمة</p><h1>حساب Subnet خطوة بخطوة بمثال واضح</h1>
+<p class="meta"><time datetime="2026-11-17">17 نوفمبر 2026</time> · بقلم معتصم طارق هاشم</p>
+<p class="lede">كيف تحسب عنوان الشبكة وعنوان البث وعدد الأجهزة من بادئة CIDR، مع مثال /26 ورابط للحاسبة.</p>
+<p>أتعلّم Subnetting بقاعدة واحدة: عدد العناوين في الشبكة هو <code>2^(32 − prefix)</code>، ومنها نطرح عنوانين (الشبكة والبث) لنحصل على عدد الأجهزة الصالحة.</p>
+<h2>مثال: 192.168.10.77/26</h2>
+<ol><li><b>القناع:</b> /26 يعني 26 بتاً للشبكة، فالقناع <code>255.255.255.192</code>.</li><li><b>حجم الكتلة:</b> 256 − 192 = 64 عنواناً في كل شبكة فرعية.</li><li><b>عنوان الشبكة:</b> أكبر مضاعف لـ64 لا يتجاوز 77 هو 64، فالشبكة <code>192.168.10.64</code>.</li><li><b>عنوان البث:</b> 64 + 64 − 1 = 127، أي <code>192.168.10.127</code>.</li><li><b>النطاق الصالح:</b> من <code>192.168.10.65</code> إلى <code>192.168.10.126</code>.</li><li><b>عدد الأجهزة:</b> 64 − 2 = 62.</li></ol>
+<h2>جدول سريع للبادئات الشائعة</h2>
+<table><thead><tr><th>البادئة</th><th>القناع</th><th>الأجهزة</th></tr></thead><tbody><tr><td dir="ltr">/24</td><td dir="ltr">255.255.255.0</td><td>254</td></tr><tr><td dir="ltr">/25</td><td dir="ltr">255.255.255.128</td><td>126</td></tr><tr><td dir="ltr">/26</td><td dir="ltr">255.255.255.192</td><td>62</td></tr><tr><td dir="ltr">/27</td><td dir="ltr">255.255.255.224</td><td>30</td></tr><tr><td dir="ltr">/28</td><td dir="ltr">255.255.255.240</td><td>14</td></tr><tr><td dir="ltr">/30</td><td dir="ltr">255.255.255.252</td><td>2</td></tr></tbody></table>
+<p>للتحقق من أي حساب استخدم <a href="/tools/#subnet">حاسبة Subnet</a>، وإن أردت تقسيم شبكة واحدة إلى شبكات بأحجام مختلفة فاستعمل <a href="/tools/#vlsm">أداة VLSM</a>.</p>
+</article><aside class="cta"><b>تحتاج مساعدة في شبكتك أو أنظمتك؟</b><p>أعمل في الشبكات والدعم الفني وإدارة الأنظمة. راسلني وأرد عليك.</p><a class="btn" href="/#contact">تواصل معي</a> <a class="btn o" href="/tools/">جرّب أدوات الشبكات</a></aside>
+<h2>مقالات ذات صلة</h2><div class="cards"><a class="card" href="/articles/vlan-no-connectivity"><b>VLAN جديدة ولا يتصل الجهاز: 4 فحوصات على سويتش Cisco</b><span class="d">خطوات عملية لتشخيص جهاز لا يتصل بعد إنشاء VLAN جديدة: المنفذ، الـtrunk، واجهة SVI، وDHCP.</span></a><a class="card" href="/articles/ipsec-vpn-tunnel-down"><b>نفق IPsec VPN لا يرتفع: من أين أبدأ؟</b><span class="d">تسلسل تشخيص نفق IPsec بين جدارين ناريين: المرحلة الأولى، المنافذ، NAT-T، المرحلة الثانية، والسجلات.</span></a><a class="card" href="/articles/internet-down-troubleshooting-order"><b>الإنترنت مقطوع؟ تسلسل التشخيص الذي أتبعه</b><span class="d">منهج من الأسفل إلى الأعلى لعزل عطل الإنترنت بين الجهاز والشبكة المحلية ومزود الخدمة وDNS في دقائق.</span></a></div></main>
+<footer>© 2026 معتصم طارق هاشم · <a href="/">الرئيسية</a> · <a href="/en/" lang="en" hreflang="en">English</a></footer>
+<script src="/assets/shared.js"></script>
+</body></html>

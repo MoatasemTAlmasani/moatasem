@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>حساب Active Directory مقفل: كيف تعرف السبب وتفتحه | معتصم هاشم</title>
+<meta name="description" content="فتح الحساب المقفل في Active Directory وتتبع مصدر القفل عبر الأحداث 4740 على متحكم النطاق.">
+<meta name="theme-color" content="#050E15">
+<link rel="canonical" href="https://moatasem.vercel.app/articles/active-directory-account-lockout">
+<meta property="og:type" content="article">
+<meta property="og:title" content="حساب Active Directory مقفل: كيف تعرف السبب وتفتحه | معتصم هاشم">
+<meta property="og:description" content="فتح الحساب المقفل في Active Directory وتتبع مصدر القفل عبر الأحداث 4740 على متحكم النطاق.">
+<meta property="og:url" content="https://moatasem.vercel.app/articles/active-directory-account-lockout">
+<meta property="og:image" content="https://moatasem.vercel.app/assets/og-image.jpeg?v=1">
+<meta property="og:locale" content="ar_AR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/shared.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "حساب Active Directory مقفل: كيف تعرف السبب وتفتحه", "description": "فتح الحساب المقفل في Active Directory وتتبع مصدر القفل عبر الأحداث 4740 على متحكم النطاق.", "inLanguage": "ar", "datePublished": "2026-11-17", "dateModified": "2026-11-17", "mainEntityOfPage": "https://moatasem.vercel.app/articles/active-directory-account-lockout", "image": "https://moatasem.vercel.app/assets/og-image.jpeg", "author": {"@type": "Person", "name": "معتصم طارق هاشم", "url": "https://moatasem.vercel.app/"}, "publisher": {"@type": "Person", "name": "معتصم طارق هاشم", "url": "https://moatasem.vercel.app/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://moatasem.vercel.app/"}, {"@type": "ListItem", "position": 2, "name": "المقالات", "item": "https://moatasem.vercel.app/articles/"}, {"@type": "ListItem", "position": 3, "name": "حساب Active Directory مقفل: كيف تعرف السبب وتفتحه", "item": "https://moatasem.vercel.app/articles/active-directory-account-lockout"}]}</script>
+<script defer data-domain="moatasem.vercel.app" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">انتقل إلى المحتوى</a>
+<header class="bar"><div class="bar-in"><a class="brand" href="/">معتصم طارق هاشم</a>
+<nav aria-label="التنقل"><a href="/">الرئيسية</a><a href="/articles/" aria-current="page">المقالات</a><a href="/tools/">الأدوات</a><a href="/cheatsheet/">ملف مجاني</a><a href="/#contact">تواصل</a></nav>
+<button class="tbtn" id="tt" type="button" aria-label="تبديل المظهر">◐</button></div></header>
+<main id="main" class="wrap"><article>
+<nav class="meta" aria-label="مسار الصفحة"><a href="/">الرئيسية</a> › <a href="/articles/">المقالات</a></nav>
+<p class="eyebrow">شبكات وأنظمة</p><h1>حساب Active Directory مقفل: كيف تعرف السبب وتفتحه</h1>
+<p class="meta"><time datetime="2026-11-17">17 نوفمبر 2026</time> · بقلم معتصم طارق هاشم</p>
+<p class="lede">فتح الحساب المقفل في Active Directory وتتبع مصدر القفل عبر الأحداث 4740 على متحكم النطاق.</p>
+<p>يتصل المستخدم قائلاً إنه لا يستطيع الدخول رغم أن كلمة المرور صحيحة. غالباً حسابه مقفل بسبب محاولات فاشلة متكررة، وأحياناً بسبب جهاز يستخدم كلمة مرور قديمة.</p>
+<h2>فتح الحساب</h2>
+<p>من واجهة Active Directory Users and Computers: افتح خصائص المستخدم، تبويب Account، ثم اختر Unlock account. أو بـPowerShell:</p>
+<pre>Unlock-ADAccount -Identity username
+Get-ADUser username -Properties LockedOut,BadLogonCount,LastBadPasswordAttempt</pre>
+<h2>معرفة سبب القفل</h2>
+<p>فتح الحساب لا يكفي إن عاد القفل بعد دقائق. المصدر الشائع هو جهاز أو خدمة تحاول الدخول بكلمة قديمة: هاتف متصل بالبريد، أو قرص شبكي مربوط، أو مهمة مجدولة، أو جلسة RDP قديمة.</p>
+<p>على متحكم النطاق الذي يحمل دور PDC Emulator ابحث في سجل Security عن الحدث <code>4740</code> الذي يعرض اسم الجهاز المتسبب:</p>
+<pre>Get-WinEvent -FilterHashtable @{LogName='Security';Id=4740} -MaxEvents 20 |
+ Select TimeCreated,Message</pre>
+<div class="note">لا تعطِ المستخدم كلمة مرور مؤقتة عبر قناة غير آمنة، واطلب منه تغييرها عند أول دخول (User must change password at next logon).</div>
+<p>بعد تحديد الجهاز المتسبب حدّث كلمة المرور المخزّنة فيه أو احذفها، فينتهي القفل المتكرر من جذره.</p>
+</article><aside class="cta"><b>تحتاج مساعدة في شبكتك أو أنظمتك؟</b><p>أعمل في الشبكات والدعم الفني وإدارة الأنظمة. راسلني وأرد عليك.</p><a class="btn" href="/#contact">تواصل معي</a> <a class="btn o" href="/tools/">جرّب أدوات الشبكات</a></aside>
+<h2>مقالات ذات صلة</h2><div class="cards"><a class="card" href="/articles/vlan-no-connectivity"><b>VLAN جديدة ولا يتصل الجهاز: 4 فحوصات على سويتش Cisco</b><span class="d">خطوات عملية لتشخيص جهاز لا يتصل بعد إنشاء VLAN جديدة: المنفذ، الـtrunk، واجهة SVI، وDHCP.</span></a><a class="card" href="/articles/ipsec-vpn-tunnel-down"><b>نفق IPsec VPN لا يرتفع: من أين أبدأ؟</b><span class="d">تسلسل تشخيص نفق IPsec بين جدارين ناريين: المرحلة الأولى، المنافذ، NAT-T، المرحلة الثانية، والسجلات.</span></a><a class="card" href="/articles/internet-down-troubleshooting-order"><b>الإنترنت مقطوع؟ تسلسل التشخيص الذي أتبعه</b><span class="d">منهج من الأسفل إلى الأعلى لعزل عطل الإنترنت بين الجهاز والشبكة المحلية ومزود الخدمة وDNS في دقائق.</span></a></div></main>
+<footer>© 2026 معتصم طارق هاشم · <a href="/">الرئيسية</a> · <a href="/en/" lang="en" hreflang="en">English</a></footer>
+<script src="/assets/shared.js"></script>
+</body></html>

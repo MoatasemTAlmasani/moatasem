@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>لماذا يحصل الجهاز على عنوان 169.254؟ وكيف تصلحه | معتصم هاشم</title>
+<meta name="description" content="شرح عنوان APIPA الذي يظهر عند فشل DHCP، وخطوات الإصلاح على Windows وعلى السويتش.">
+<meta name="theme-color" content="#050E15">
+<link rel="canonical" href="https://moatasem.vercel.app/articles/dhcp-169-254">
+<meta property="og:type" content="article">
+<meta property="og:title" content="لماذا يحصل الجهاز على عنوان 169.254؟ وكيف تصلحه | معتصم هاشم">
+<meta property="og:description" content="شرح عنوان APIPA الذي يظهر عند فشل DHCP، وخطوات الإصلاح على Windows وعلى السويتش.">
+<meta property="og:url" content="https://moatasem.vercel.app/articles/dhcp-169-254">
+<meta property="og:image" content="https://moatasem.vercel.app/assets/og-image.jpeg?v=1">
+<meta property="og:locale" content="ar_AR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/shared.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "لماذا يحصل الجهاز على عنوان 169.254؟ وكيف تصلحه", "description": "شرح عنوان APIPA الذي يظهر عند فشل DHCP، وخطوات الإصلاح على Windows وعلى السويتش.", "inLanguage": "ar", "datePublished": "2026-11-17", "dateModified": "2026-11-17", "mainEntityOfPage": "https://moatasem.vercel.app/articles/dhcp-169-254", "image": "https://moatasem.vercel.app/assets/og-image.jpeg", "author": {"@type": "Person", "name": "معتصم طارق هاشم", "url": "https://moatasem.vercel.app/"}, "publisher": {"@type": "Person", "name": "معتصم طارق هاشم", "url": "https://moatasem.vercel.app/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://moatasem.vercel.app/"}, {"@type": "ListItem", "position": 2, "name": "المقالات", "item": "https://moatasem.vercel.app/articles/"}, {"@type": "ListItem", "position": 3, "name": "لماذا يحصل الجهاز على عنوان 169.254؟ وكيف تصلحه", "item": "https://moatasem.vercel.app/articles/dhcp-169-254"}]}</script>
+<script defer data-domain="moatasem.vercel.app" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">انتقل إلى المحتوى</a>
+<header class="bar"><div class="bar-in"><a class="brand" href="/">معتصم طارق هاشم</a>
+<nav aria-label="التنقل"><a href="/">الرئيسية</a><a href="/articles/" aria-current="page">المقالات</a><a href="/tools/">الأدوات</a><a href="/cheatsheet/">ملف مجاني</a><a href="/#contact">تواصل</a></nav>
+<button class="tbtn" id="tt" type="button" aria-label="تبديل المظهر">◐</button></div></header>
+<main id="main" class="wrap"><article>
+<nav class="meta" aria-label="مسار الصفحة"><a href="/">الرئيسية</a> › <a href="/articles/">المقالات</a></nav>
+<p class="eyebrow">شبكات وأنظمة</p><h1>لماذا يحصل الجهاز على عنوان 169.254؟ وكيف تصلحه</h1>
+<p class="meta"><time datetime="2026-11-17">17 نوفمبر 2026</time> · بقلم معتصم طارق هاشم</p>
+<p class="lede">شرح عنوان APIPA الذي يظهر عند فشل DHCP، وخطوات الإصلاح على Windows وعلى السويتش.</p>
+<p>إذا ظهر عنوان يبدأ بـ<code>169.254</code> على جهاز Windows، فهذا يعني أنه لم يجد خادم DHCP، فخصّص لنفسه عنواناً تلقائياً يُسمى APIPA. هذا العنوان لا يوصله بأي شبكة خارج الجهة المحلية.</p>
+<h2>الأسباب الشائعة</h2>
+<ul><li>خادم DHCP متوقف أو نفدت عناوين النطاق (scope).</li><li>الجهاز على VLAN لا يصلها طلب DHCP، وقد يكون السبب غياب <code>ip helper-address</code>.</li><li>كابل أو منفذ سويتش معطوب، أو منفذ مغلق بسبب port security.</li><li>خدمة DHCP Client متوقفة على الجهاز.</li></ul>
+<h2>خطوات الإصلاح</h2>
+<pre>ipconfig /release
+ipconfig /renew
+ipconfig /all</pre>
+<p>إن لم يتغير العنوان، جرّب كابلاً أو منفذاً آخر، ثم تأكد من أن الجهاز على الـVLAN الصحيحة. بعدها افحص خادم DHCP:</p>
+<pre># على Windows Server
+Get-DhcpServerv4ScopeStatistics</pre>
+<p>راقب نسبة الاستخدام. إن اقتربت من 100% فوسّع النطاق أو قصّر مدة الإيجار (lease).</p>
+<div class="note">إن كان خادم DHCP في شبكة أخرى فتأكد من ضبط <code>ip helper-address</code> على واجهة الـVLAN، كما في مقال <a href="/articles/vlan-no-connectivity">VLAN جديدة ولا يتصل الجهاز</a>.</div>
+</article><aside class="cta"><b>تحتاج مساعدة في شبكتك أو أنظمتك؟</b><p>أعمل في الشبكات والدعم الفني وإدارة الأنظمة. راسلني وأرد عليك.</p><a class="btn" href="/#contact">تواصل معي</a> <a class="btn o" href="/tools/">جرّب أدوات الشبكات</a></aside>
+<h2>مقالات ذات صلة</h2><div class="cards"><a class="card" href="/articles/vlan-no-connectivity"><b>VLAN جديدة ولا يتصل الجهاز: 4 فحوصات على سويتش Cisco</b><span class="d">خطوات عملية لتشخيص جهاز لا يتصل بعد إنشاء VLAN جديدة: المنفذ، الـtrunk، واجهة SVI، وDHCP.</span></a><a class="card" href="/articles/ipsec-vpn-tunnel-down"><b>نفق IPsec VPN لا يرتفع: من أين أبدأ؟</b><span class="d">تسلسل تشخيص نفق IPsec بين جدارين ناريين: المرحلة الأولى، المنافذ، NAT-T، المرحلة الثانية، والسجلات.</span></a><a class="card" href="/articles/internet-down-troubleshooting-order"><b>الإنترنت مقطوع؟ تسلسل التشخيص الذي أتبعه</b><span class="d">منهج من الأسفل إلى الأعلى لعزل عطل الإنترنت بين الجهاز والشبكة المحلية ومزود الخدمة وDNS في دقائق.</span></a></div></main>
+<footer>© 2026 معتصم طارق هاشم · <a href="/">الرئيسية</a> · <a href="/en/" lang="en" hreflang="en">English</a></footer>
+<script src="/assets/shared.js"></script>
+</body></html>
