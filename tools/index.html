@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>أدوات الشبكات المجانية: Subnet وVLSM وWildcard والمنافذ | معتصم هاشم</title>
+<meta name="description" content="حاسبة Subnet وأداة VLSM ومحوّل Wildcard Mask وجدول المنافذ الشائعة. أدوات مجانية تعمل داخل المتصفح بدون إرسال بياناتك.">
+<meta name="theme-color" content="#050E15">
+<link rel="canonical" href="https://moatasem.vercel.app/tools/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="أدوات الشبكات المجانية: Subnet وVLSM وWildcard والمنافذ | معتصم هاشم">
+<meta property="og:description" content="حاسبة Subnet وأداة VLSM ومحوّل Wildcard Mask وجدول المنافذ الشائعة. أدوات مجانية تعمل داخل المتصفح بدون إرسال بياناتك.">
+<meta property="og:url" content="https://moatasem.vercel.app/tools/">
+<meta property="og:image" content="https://moatasem.vercel.app/assets/og-image.jpeg?v=1">
+<meta property="og:locale" content="ar_AR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/shared.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "أدوات الشبكات: Subnet وVLSM وWildcard والمنافذ", "url": "https://moatasem.vercel.app/tools/", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "inLanguage": "ar", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "author": {"@type": "Person", "name": "معتصم طارق هاشم"}}</script>
+<script defer data-domain="moatasem.vercel.app" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">انتقل إلى المحتوى</a>
+<header class="bar"><div class="bar-in"><a class="brand" href="/">معتصم طارق هاشم</a>
+<nav aria-label="التنقل"><a href="/">الرئيسية</a><a href="/articles/">المقالات</a><a href="/tools/" aria-current="page">الأدوات</a><a href="/cheatsheet/">ملف مجاني</a><a href="/#contact">تواصل</a></nav>
+<button class="tbtn" id="tt" type="button" aria-label="تبديل المظهر">◐</button></div></header>
+<main id="main" class="wrap wide"><p class="eyebrow">أدوات</p><h1>أدوات الشبكات المجانية</h1>
+<p class="lede">تعمل كلها داخل متصفحك، ولا تُرسل أي بيانات إلى أي خادم.</p>
+<div class="tabs" role="tablist" aria-label="الأدوات"><button role="tab" data-p="subnet" aria-selected="true">حاسبة Subnet</button><button role="tab" data-p="vlsm" aria-selected="false">VLSM</button><button role="tab" data-p="wildcard" aria-selected="false">Wildcard</button><button role="tab" data-p="ports" aria-selected="false">المنافذ الشائعة</button></div>
+<section role="tabpanel" id="subnet"><h2>حاسبة Subnet</h2><div class="row"><div><label for="s-ip">عنوان IP</label><input id="s-ip" value="192.168.10.77" inputmode="decimal" autocomplete="off"></div><div><label for="s-cidr">البادئة CIDR</label><input id="s-cidr" value="26" inputmode="numeric" autocomplete="off"></div></div><p class="err" id="s-err" role="alert" hidden>قيمة غير صحيحة، راجع المدخلات.</p><div class="tbl"><table><tbody id="s-out"></tbody></table></div><p class="meta">شرح الحساب خطوة بخطوة: <a href="/articles/subnetting-step-by-step">مقال Subnetting</a></p></section>
+<section role="tabpanel" id="vlsm" hidden><h2>أداة VLSM</h2><p>أدخل الشبكة الأم وعدد الأجهزة المطلوب لكل شبكة فرعية، وستوزّع الأداة العناوين من الأكبر إلى الأصغر.</p><div class="row"><div><label for="v-ip">الشبكة الأم</label><input id="v-ip" value="192.168.1.0" autocomplete="off"></div><div><label for="v-cidr">البادئة</label><input id="v-cidr" value="24" inputmode="numeric" autocomplete="off"></div><div style="flex:2 1 240px"><label for="v-hosts">أعداد الأجهزة (مفصولة بفواصل)</label><input id="v-hosts" value="100, 50, 20, 10, 2" autocomplete="off"></div></div><p class="err" id="v-err" role="alert" hidden></p><div class="tbl"><table><thead><tr><th>#</th><th>الأجهزة</th><th>الشبكة</th><th>القناع</th><th>النطاق الصالح</th><th>البث</th><th>المتاح</th></tr></thead><tbody id="v-out"></tbody></table></div></section>
+<section role="tabpanel" id="wildcard" hidden><h2>محوّل Wildcard Mask</h2><p>أدخل بادئة (مثل <code>/26</code>) أو قناعاً أو Wildcard، وسيُحوَّل بين الأشكال. يُستخدم الـWildcard في قوائم ACL وفي OSPF.</p><div class="row"><div><label for="w-in">القيمة</label><input id="w-in" value="255.255.255.192" autocomplete="off"></div></div><p class="err" id="w-err" role="alert" hidden>قيمة غير صحيحة، راجع المدخلات.</p><div class="tbl"><table><tbody id="w-out"></tbody></table></div></section>
+<section role="tabpanel" id="ports" hidden><h2>جدول المنافذ الشائعة</h2><div class="row"><div><label for="p-q">بحث (رقم أو اسم)</label><input id="p-q" placeholder="443 أو SSH أو DNS" autocomplete="off" dir="auto"></div></div><div class="tbl"><table><thead><tr><th class="mono">المنفذ</th><th class="mono">البروتوكول</th><th>الخدمة</th><th>الاستخدام</th></tr></thead><tbody id="p-out"></tbody></table></div></section>
+<aside class="cta"><b>هل تحتاج الأوامر الجاهزة؟</b><p>حمّل ملف أهم أوامر FortiGate وCisco مجاناً.</p><a class="btn" href="/cheatsheet/">حمّل الملف المجاني</a></aside></main>
+<script src="/assets/tools.js"></script>
+<footer>© 2026 معتصم طارق هاشم · <a href="/">الرئيسية</a> · <a href="/en/" lang="en" hreflang="en">English</a></footer>
+<script src="/assets/shared.js"></script>
+</body></html>
