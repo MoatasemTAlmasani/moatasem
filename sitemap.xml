@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://moatasem.vercel.app/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://moatasem.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://moatasem.vercel.app/en/"/>
+  </url>
+  <url>
+    <loc>https://moatasem.vercel.app/en/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://moatasem.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://moatasem.vercel.app/en/"/>
+  </url>
+  <url>
+    <loc>https://moatasem.vercel.app/articles/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://moatasem.vercel.app/articles/vlan-no-connectivity</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://moatasem.vercel.app/articles/ipsec-vpn-tunnel-down</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://moatasem.vercel.app/articles/internet-down-troubleshooting-order</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://moatasem.vercel.app/articles/dhcp-169-254</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://moatasem.vercel.app/articles/subnetting-step-by-step</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://moatasem.vercel.app/articles/active-directory-account-lockout</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://moatasem.vercel.app/tools/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://moatasem.vercel.app/cheatsheet/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+</urlset>
