@@ -1,0 +1,564 @@
+{
+ "items": [
+  {
+   "title": "CCNA — Cisco Certified Network Associate",
+   "issuer": "Cisco",
+   "date": "October 2021",
+   "category": "net",
+   "featured": true,
+   "more": false,
+   "badge": {
+    "ar": "اختبار معتمد من Cisco",
+    "en": "Official Cisco exam"
+   },
+   "key": "ccna",
+   "pdf": "/assets/certs/ccna.pdf",
+   "optional": false,
+   "link": ""
+  },
+  {
+   "title": "CCNA 200-301",
+   "issuer": "Simplilearn | SkillUp",
+   "date": "September 2026",
+   "category": "net",
+   "featured": false,
+   "more": false,
+   "badge": {
+    "ar": "",
+    "en": ""
+   },
+   "key": "ccna-200-301",
+   "pdf": "/assets/certs/ccna-200-301.pdf",
+   "optional": false,
+   "link": ""
+  },
+  {
+   "title": "Project Management Professional",
+   "issuer": "Pearson via Coursera",
+   "date": "October 2026",
+   "category": "itsm",
+   "featured": false,
+   "more": false,
+   "badge": {
+    "ar": "",
+    "en": ""
+   },
+   "key": "project-management-professional",
+   "pdf": "/assets/certs/project-management-professional.pdf",
+   "optional": true,
+   "link": "https://www.credly.com/badges/d0c599a7-4e74-4050-abee-0f79585b9fb7/public_url"
+  },
+  {
+   "title": "ITIL Foundation",
+   "issuer": "Institute of Banking Studies",
+   "date": "November 2025",
+   "category": "itsm",
+   "featured": false,
+   "more": false,
+   "badge": {
+    "ar": "",
+    "en": ""
+   },
+   "key": "itil-foundation",
+   "pdf": "/assets/certs/itil-foundation.pdf",
+   "optional": false,
+   "link": ""
+  },
+  {
+   "title": "Ethical Hacking Essentials",
+   "issuer": "EC-Council",
+   "date": "September 2025",
+   "category": "net",
+   "featured": false,
+   "more": false,
+   "badge": {
+    "ar": "",
+    "en": ""
+   },
+   "key": "ethical-hacking-essentials",
+   "pdf": "/assets/certs/ethical-hacking-essentials.pdf",
+   "optional": false,
+   "link": "https://www.coursera.org/account/accomplishments/verify/OXVAGAQ75J9G"
+  },
+  {
+   "title": "FortiGate Administrator",
+   "issuer": "Fortinet",
+   "date": "September 2025",
+   "category": "net",
+   "featured": false,
+   "more": false,
+   "badge": {
+    "ar": "",
+    "en": ""
+   },
+   "key": "fortigate-administrator",
+   "pdf": "/assets/certs/fortigate-administrator.pdf",
+   "optional": false,
+   "link": "https://www.coursera.org/account/accomplishments/verify/46KKNE072N18"
+  },
+  {
+   "title": "IBM IT Scrum Master (Diploma)",
+   "issuer": "IBM via Coursera",
+   "date": "April 2024",
+   "category": "itsm",
+   "featured": false,
+   "more": false,
+   "badge": {
+    "ar": "",
+    "en": ""
+   },
+   "key": "ibm-scrum-master",
+   "pdf": "/assets/certs/ibm-scrum-master.pdf",
+   "optional": false,
+   "link": "https://www.credly.com/badges/f827a0a4-8071-486b-a6b0-9ee44e825fb8/public_url"
+  },
+  {
+   "title": "Google IT Support Professional (v3)",
+   "issuer": "Google",
+   "date": "October 2026",
+   "category": "itsm",
+   "featured": false,
+   "more": false,
+   "badge": {
+    "ar": "",
+    "en": ""
+   },
+   "key": "google-it-support-v3",
+   "pdf": "/assets/certs/google-it-support-v3.pdf",
+   "optional": true,
+   "link": "https://www.credly.com/badges/25577482-63c5-4671-829c-1bd87a3ca55c/public_url"
+  },
+  {
+   "title": "FCA — Fortinet Certified Associate",
+   "issuer": "Fortinet",
+   "date": "November 2023",
+   "category": "net",
+   "featured": false,
+   "more": false,
+   "badge": {
+    "ar": "",
+    "en": ""
+   },
+   "key": "fortinet-fca",
+   "pdf": "/assets/certs/fortinet-fca.pdf",
+   "optional": false,
+   "link": "https://www.credly.com/badges/419fbb3a-fe46-493e-a077-4367be4abd46/public_url"
+  },
+  {
+   "title": "MCSA — Microsoft Certified Solutions Associate",
+   "issuer": "University Computer Center, UST",
+   "date": "January – April 2023",
+   "category": "sys",
+   "featured": false,
+   "more": false,
+   "badge": {
+    "ar": "",
+    "en": ""
+   },
+   "key": "mcsa",
+   "pdf": "/assets/certs/mcsa.pdf",
+   "optional": false,
+   "link": ""
+  },
+  {
+   "title": "Claude 101",
+   "issuer": "Claude Academy",
+   "date": "October 2026",
+   "category": "pd",
+   "featured": false,
+   "more": true,
+   "badge": {
+    "ar": "",
+    "en": ""
+   },
+   "key": "claude-101",
+   "pdf": "/assets/certs/claude-101.pdf",
+   "optional": true,
+   "link": ""
+  },
+  {
+   "title": "Claude Code 101",
+   "issuer": "Claude Academy",
+   "date": "October 2026",
+   "category": "pd",
+   "featured": false,
+   "more": true,
+   "badge": {
+    "ar": "",
+    "en": ""
+   },
+   "key": "claude-code-101",
+   "pdf": "/assets/certs/claude-code-101.pdf",
+   "optional": true,
+   "link": ""
+  },
+  {
+   "title": "Introduction to ITIL v4",
+   "issuer": "Simplilearn | SkillUp",
+   "date": "September 2026",
+   "category": "itsm",
+   "featured": false,
+   "more": true,
+   "badge": {
+    "ar": "",
+    "en": ""
+   },
+   "key": "itil-v4-intro",
+   "pdf": "/assets/certs/itil-v4-intro.pdf",
+   "optional": false,
+   "link": ""
+  },
+  {
+   "title": "Excel Basics for Data Analysis",
+   "issuer": "IBM",
+   "date": "November 2025",
+   "category": "sys",
+   "featured": false,
+   "more": true,
+   "badge": {
+    "ar": "",
+    "en": ""
+   },
+   "key": "excel-data-analysis",
+   "pdf": "/assets/certs/excel-data-analysis.pdf",
+   "optional": false,
+   "link": "https://www.credly.com/badges/3a374e96-e614-4c84-93db-f6891cedf46c/public_url"
+  },
+  {
+   "title": "Introduction to Microsoft Azure Services",
+   "issuer": "Microsoft",
+   "date": "January 2025",
+   "category": "sys",
+   "featured": false,
+   "more": true,
+   "badge": {
+    "ar": "",
+    "en": ""
+   },
+   "key": "azure-services",
+   "pdf": "/assets/certs/azure-services.pdf",
+   "optional": false,
+   "link": "https://www.coursera.org/account/accomplishments/verify/6F0ETH3945CL"
+  },
+  {
+   "title": "Introduction to Agile Development and Scrum",
+   "issuer": "IBM",
+   "date": "November 2024",
+   "category": "itsm",
+   "featured": false,
+   "more": true,
+   "badge": {
+    "ar": "",
+    "en": ""
+   },
+   "key": "ibm-agile-scrum-intro",
+   "pdf": "/assets/certs/ibm-agile-scrum-intro.pdf",
+   "optional": false,
+   "link": ""
+  },
+  {
+   "title": "Scrum Master Capstone",
+   "issuer": "SkillUp",
+   "date": "April 2024",
+   "category": "itsm",
+   "featured": false,
+   "more": true,
+   "badge": {
+    "ar": "",
+    "en": ""
+   },
+   "key": "scrum-master-capstone",
+   "pdf": "/assets/certs/scrum-master-capstone.pdf",
+   "optional": false,
+   "link": "https://www.coursera.org/account/accomplishments/verify/MVHLEVMNV5JA"
+  },
+  {
+   "title": "Working as a Scrum Master",
+   "issuer": "SkillUp",
+   "date": "April 2024",
+   "category": "itsm",
+   "featured": false,
+   "more": true,
+   "badge": {
+    "ar": "",
+    "en": ""
+   },
+   "key": "working-as-scrum-master",
+   "pdf": "/assets/certs/working-as-scrum-master.pdf",
+   "optional": false,
+   "link": "https://www.coursera.org/account/accomplishments/verify/G5WGSAMHN8SU"
+  },
+  {
+   "title": "DevOps Essentials",
+   "issuer": "IBM",
+   "date": "March 2024",
+   "category": "sys",
+   "featured": false,
+   "more": true,
+   "badge": {
+    "ar": "",
+    "en": ""
+   },
+   "key": "ibm-devops-essentials",
+   "pdf": "/assets/certs/ibm-devops-essentials.pdf",
+   "optional": false,
+   "link": "https://www.credly.com/badges/d0a4475c-7c08-4972-b349-6724da9bef14/public_url"
+  },
+  {
+   "title": "IT Fundamentals for Everyone",
+   "issuer": "IBM",
+   "date": "March 2024",
+   "category": "itsm",
+   "featured": false,
+   "more": true,
+   "badge": {
+    "ar": "",
+    "en": ""
+   },
+   "key": "ibm-it-fundamentals",
+   "pdf": "/assets/certs/ibm-it-fundamentals.pdf",
+   "optional": false,
+   "link": "https://www.credly.com/badges/91e14c74-9881-4e06-85c7-3786f134de27/public_url"
+  },
+  {
+   "title": "Software Engineering Essentials",
+   "issuer": "IBM",
+   "date": "March 2024",
+   "category": "sys",
+   "featured": false,
+   "more": true,
+   "badge": {
+    "ar": "",
+    "en": ""
+   },
+   "key": "ibm-software-engineering-essentials",
+   "pdf": "/assets/certs/ibm-software-engineering-essentials.pdf",
+   "optional": false,
+   "link": "https://www.credly.com/badges/20c5ad03-dd4a-4008-8b29-6dadfdd75a70/public_url"
+  },
+  {
+   "title": "Introduction to Scrum Master",
+   "issuer": "SkillUp",
+   "date": "February 2024",
+   "category": "itsm",
+   "featured": false,
+   "more": true,
+   "badge": {
+    "ar": "",
+    "en": ""
+   },
+   "key": "intro-scrum-master",
+   "pdf": "/assets/certs/intro-scrum-master.pdf",
+   "optional": false,
+   "link": "https://www.coursera.org/account/accomplishments/verify/SJSG6S52Z8YN"
+  },
+  {
+   "title": "Getting Started in Cybersecurity 2.0",
+   "issuer": "Fortinet",
+   "date": "November 2023",
+   "category": "net",
+   "featured": false,
+   "more": true,
+   "badge": {
+    "ar": "",
+    "en": ""
+   },
+   "key": "fortinet-getting-started-cybersecurity",
+   "pdf": "/assets/certs/fortinet-getting-started-cybersecurity.pdf",
+   "optional": false,
+   "link": "https://www.credly.com/badges/e38be34a-df98-4dc3-b8f5-e6cd538e14c0/public_url"
+  },
+  {
+   "title": "Introduction to the Threat Landscape 2.0",
+   "issuer": "Fortinet",
+   "date": "November 2023",
+   "category": "net",
+   "featured": false,
+   "more": true,
+   "badge": {
+    "ar": "",
+    "en": ""
+   },
+   "key": "fortinet-threat-landscape",
+   "pdf": "/assets/certs/fortinet-threat-landscape.pdf",
+   "optional": false,
+   "link": "https://www.credly.com/badges/de4f3231-74fd-4fae-b7c6-7c1e8d869c0e/public_url"
+  },
+  {
+   "title": "Fortinet FortiGate 7.4 Operator",
+   "issuer": "Fortinet",
+   "date": "October 2023",
+   "category": "net",
+   "featured": false,
+   "more": true,
+   "badge": {
+    "ar": "",
+    "en": ""
+   },
+   "key": "fortigate-74-operator",
+   "pdf": "/assets/certs/fortigate-74-operator.pdf",
+   "optional": false,
+   "link": "https://www.credly.com/badges/34b88da2-963c-4285-991f-9b98d4b0d9cb/public_url"
+  },
+  {
+   "title": "FCF — Fortinet Certified Fundamentals",
+   "issuer": "Fortinet",
+   "date": "October 2023",
+   "category": "net",
+   "featured": false,
+   "more": true,
+   "badge": {
+    "ar": "",
+    "en": ""
+   },
+   "key": "fortinet-fcf",
+   "pdf": "/assets/certs/fortinet-fcf.pdf",
+   "optional": false,
+   "link": "https://www.credly.com/badges/fee59793-ba96-4c14-bf25-f072a7a529f7/public_url"
+  },
+  {
+   "title": "Oracle Cloud Data Management",
+   "issuer": "Oracle",
+   "date": "September 2023",
+   "category": "sys",
+   "featured": false,
+   "more": true,
+   "badge": {
+    "ar": "",
+    "en": ""
+   },
+   "key": "oracle-cloud-data-management",
+   "pdf": "/assets/certs/oracle-cloud-data-management.pdf",
+   "optional": false,
+   "link": ""
+  },
+  {
+   "title": "Development of Leadership Skills",
+   "issuer": "Consultation & Development Center, UST",
+   "date": "September 2023",
+   "category": "pd",
+   "featured": false,
+   "more": true,
+   "badge": {
+    "ar": "",
+    "en": ""
+   },
+   "key": "leadership-skills",
+   "pdf": "/assets/certs/leadership-skills.pdf",
+   "optional": false,
+   "link": ""
+  },
+  {
+   "title": "Introduction to Internet of Things",
+   "issuer": "Cisco",
+   "date": "September 2022",
+   "category": "net",
+   "featured": false,
+   "more": true,
+   "badge": {
+    "ar": "",
+    "en": ""
+   },
+   "key": "cisco-iot",
+   "pdf": "/assets/certs/cisco-iot.pdf",
+   "optional": false,
+   "link": "https://www.credly.com/badges/08292524-cb54-4a96-a44f-b419760f6bfe/public_url"
+  },
+  {
+   "title": "Introduction to Cybersecurity",
+   "issuer": "Cisco",
+   "date": "August 2022",
+   "category": "net",
+   "featured": false,
+   "more": true,
+   "badge": {
+    "ar": "",
+    "en": ""
+   },
+   "key": "cisco-cybersecurity",
+   "pdf": "/assets/certs/cisco-cybersecurity.pdf",
+   "optional": false,
+   "link": "https://www.credly.com/badges/aa659452-1181-486f-87b9-7fc29f35db88/public_url"
+  },
+  {
+   "title": "Diploma, Mobile Maintenance & Programming",
+   "issuer": "Science and Life Institution",
+   "date": "November 2021 – January 2022",
+   "category": "pd",
+   "featured": false,
+   "more": true,
+   "badge": {
+    "ar": "",
+    "en": ""
+   },
+   "key": "mobile-maintenance-diploma",
+   "pdf": "/assets/certs/mobile-maintenance-diploma.pdf",
+   "optional": false,
+   "link": ""
+  },
+  {
+   "title": "ICDL — International Computer Driving License",
+   "issuer": "ICDL",
+   "date": "February – April 2021",
+   "category": "itsm",
+   "featured": false,
+   "more": true,
+   "badge": {
+    "ar": "",
+    "en": ""
+   },
+   "key": "icdl",
+   "pdf": "/assets/certs/icdl.pdf",
+   "optional": false,
+   "link": ""
+  },
+  {
+   "title": "Thinking Skills",
+   "issuer": "Consultation & Development Center, UST",
+   "date": "June 2020",
+   "category": "pd",
+   "featured": false,
+   "more": true,
+   "badge": {
+    "ar": "",
+    "en": ""
+   },
+   "key": "thinking-skills",
+   "pdf": "/assets/certs/thinking-skills.pdf",
+   "optional": false,
+   "link": ""
+  },
+  {
+   "title": "Communication Skills",
+   "issuer": "Consultation & Development Center",
+   "date": "June 2020",
+   "category": "pd",
+   "featured": false,
+   "more": true,
+   "badge": {
+    "ar": "",
+    "en": ""
+   },
+   "key": "communication-skills",
+   "pdf": "/assets/certs/communication-skills.pdf",
+   "optional": false,
+   "link": ""
+  },
+  {
+   "title": "Accounting (A)",
+   "issuer": "Ideal Modern Institute",
+   "date": "November 2019",
+   "category": "pd",
+   "featured": false,
+   "more": true,
+   "badge": {
+    "ar": "",
+    "en": ""
+   },
+   "key": "accounting-a",
+   "pdf": "/assets/certs/accounting-a.pdf",
+   "optional": false,
+   "link": ""
+  }
+ ]
+}

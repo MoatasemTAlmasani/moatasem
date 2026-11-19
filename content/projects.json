@@ -1,0 +1,136 @@
+{
+ "items": [
+  {
+   "title": {
+    "ar": "تصميم شبكة المؤسسات",
+    "en": "Enterprise Network Design"
+   },
+   "icon": "layers",
+   "tag": {
+    "ar": "مشروع تعليمي / تصميمي",
+    "en": "Academic / Design Project"
+   },
+   "text": {
+    "ar": "تصميم شبكة مؤسسية متعددة الطوابق باستخدام طبقات Core وDistribution وAccess، مع تقسيم VLAN والتكرار وInter-VLAN Routing وربط الاتصال بالإنترنت والموقع الإداري.",
+    "en": "Designed a multi-floor enterprise network using Core, Distribution, and Access layers, with VLAN segmentation, redundancy, Inter-VLAN Routing, internet uplink, and admin-site connectivity."
+   },
+   "stack": [
+    {
+     "ar": "Core / Distribution / Access",
+     "en": "Core / Distribution / Access"
+    },
+    {
+     "ar": "VLAN",
+     "en": "VLAN"
+    },
+    {
+     "ar": "Inter-VLAN Routing",
+     "en": "Inter-VLAN Routing"
+    },
+    {
+     "ar": "التكرار الشبكي",
+     "en": "Network Redundancy"
+    }
+   ]
+  },
+  {
+   "title": {
+    "ar": "اتصال WAN وربط الفروع",
+    "en": "WAN Connectivity & Branch Linking"
+   },
+   "icon": "wan",
+   "tag": {
+    "ar": "مشروع تعليمي / مختبري",
+    "en": "Academic / Lab Project"
+   },
+   "text": {
+    "ar": "دراسة وتصميم بنية شبكة واسعة النطاق WAN لربط الفروع بالمقر الرئيسي، مع إعداد VPN من نوع Site-to-Site لتأمين تبادل البيانات وضمان استمرارية الاتصال بين المواقع.",
+    "en": "Studying and designing a Wide Area Network (WAN) architecture that links branches to headquarters, with Site-to-Site VPN configuration to secure data exchange and keep sites connected."
+   },
+   "stack": [
+    {
+     "ar": "WAN",
+     "en": "WAN"
+    },
+    {
+     "ar": "Site-to-Site VPN",
+     "en": "Site-to-Site VPN"
+    },
+    {
+     "ar": "ربط الفروع",
+     "en": "Branch Connectivity"
+    },
+    {
+     "ar": "الاتصال الآمن",
+     "en": "Secure Connectivity"
+    }
+   ]
+  },
+  {
+   "title": {
+    "ar": "مختبر أمن الشبكات",
+    "en": "Network Security Lab"
+   },
+   "icon": "shield",
+   "tag": {
+    "ar": "مشروع مختبري",
+    "en": "Lab Project"
+   },
+   "text": {
+    "ar": "تدريب عملي على الجدران النارية وتهيئة VPN (Site-to-Site وRemote Access) وتقسيم الشبكات واستكشاف أعطال الأمن.",
+    "en": "Hands-on training on firewalls, configuring VPN (Site-to-Site & Remote Access), network segmentation, and security fault troubleshooting."
+   },
+   "stack": [
+    {
+     "ar": "الجدران النارية",
+     "en": "Firewalls"
+    },
+    {
+     "ar": "Site-to-Site VPN",
+     "en": "Site-to-Site VPN"
+    },
+    {
+     "ar": "Remote Access VPN",
+     "en": "Remote Access VPN"
+    },
+    {
+     "ar": "تقسيم الشبكات",
+     "en": "Network Segmentation"
+    }
+   ]
+  },
+  {
+   "title": {
+    "ar": "عمليات مكتب خدمة تقنية المعلومات",
+    "en": "IT Service Desk Operations"
+   },
+   "icon": "headset",
+   "tag": {
+    "ar": "خبرة مهنية",
+    "en": "Professional Experience"
+   },
+   "text": {
+    "ar": "تقديم الدعم الفني للمستخدمين عبر الهاتف والبريد والدردشة ونظام التذاكر ManageEngine ServiceDesk Plus، وفق ممارسات ITIL واتفاقيات مستوى الخدمة (SLA)، مع تصعيد الحالات وتوثيق الحلول.",
+    "en": "Providing technical support to users via phone, email, chat and the ManageEngine ServiceDesk Plus ticketing system, following ITIL practices and SLAs, with case escalation and solution documentation."
+   },
+   "stack": [
+    {
+     "ar": "ManageEngine ServiceDesk Plus",
+     "en": "ManageEngine ServiceDesk Plus"
+    },
+    {
+     "ar": "ITIL",
+     "en": "ITIL"
+    },
+    {
+     "ar": "SLA",
+     "en": "SLA"
+    },
+    {
+     "ar": "إدارة التذاكر",
+     "en": "Ticket Management"
+    }
+   ]
+  }
+ ]
+}

@@ -1,22 +1,28 @@
 # موقع معتصم طارق هاشم
 
-موقع شخصي ثنائي اللغة (عربي/English) مبني بـHTML وCSS وJS بدون أدوات بناء. ينشر مباشرة على Vercel.
+موقع ثنائي اللغة (عربي/English) يُولَّد من ملفات في `content/` بواسطة `build.js` على Vercel، ويُدار من لوحة تحكم على `/admin`.
 
-## الهيكل
-- `index.html` الصفحة العربية، و`en/index.html` النسخة الإنجليزية.
-- `articles/` مقالات بصفحات مستقلة، و`tools/` أدوات الشبكات، و`cheatsheet/` صفحة الملف المجاني.
-- `assets/` الصور وملفات PDF وملفات CSS/JS المشتركة.
-- `sitemap.xml` و`robots.txt` لمحركات البحث، و`vercel.json` للترويسات الأمنية.
+## لوحة التحكم
+1. افتح `https://moatasem.vercel.app/admin` من أي جهاز.
+2. اختر Sign in with GitHub token، والصق مفتاح الدخول (انظر أدناه).
+3. من اللوحة: **المقالات** (إضافة مقال)، و**محتوى الموقع** (الشهادات، الخبرات، المهارات، المشاريع، أتعلمه حالياً، التعليم).
+4. اضغط Save ثم Publish. يظهر التغيير على الموقع بعد دقيقة تقريباً.
 
-## إضافة مقال
-1. انسخ أي ملف من `articles/` وعدّل العنوان والمحتوى وبيانات Article.
-2. أضف الرابط إلى `articles/index.html` وإلى قسم المقالات في `index.html`.
-3. أضف الرابط إلى `sitemap.xml` وغيّر `lastmod`.
+### إنشاء مفتاح الدخول (مرة واحدة)
+GitHub ← Settings ← Developer settings ← Personal access tokens ← Fine-grained tokens ← Generate new token.
+- Repository access: Only select repositories واختر مستودع الموقع.
+- Permissions ← Repository permissions ← **Contents: Read and write**.
+احتفظ بالمفتاح في مكان آمن ولا تشاركه مع أحد.
+
+## بنية المشروع
+- `content/*.json` بيانات الأقسام، و`content/articles/*.md` المقالات.
+- `build.js` يولّد مجلد `dist/` (الصفحة الرئيسية، والإنجليزية، والمقالات، وsitemap.xml).
+- `index.html` و`en/index.html` قالبان: الأقسام المحاطة بـ `<!--cms:...-->` تُستبدل عند كل بناء، فلا تعدّلها يدوياً.
+- `tools/` و`cheatsheet/` و`assets/` و`404.html` ملفات ثابتة تُنسخ كما هي.
+- `admin/config.yml` يحدد حقول اللوحة.
+
+## أمر البناء محلياً
+`node build.js` ثم افتح مجلد `dist/`.
 
 ## Google Search Console
-1. أضف الموقع كخاصية Domain أو URL prefix.
-2. اختر التحقق بوسم HTML وألصق الوسم `<meta name="google-site-verification" ...>` داخل `<head>` في `index.html`.
-3. بعد النشر أرسل `https://moatasem.vercel.app/sitemap.xml` من قسم Sitemaps.
-
-## النشر
-أي `git push` إلى الفرع `main` ينشر الموقع تلقائياً بعد ربط المستودع بمشروع Vercel.
+أضف وسم التحقق داخل `<head>` في `index.html`، ثم أرسل `https://moatasem.vercel.app/sitemap.xml`.
