@@ -1,7 +1,7 @@
 # لوحة التحكم — Sveltia CMS
 backend:
   name: github
-  repo: YOUR-GITHUB-USERNAME/YOUR-REPO-NAME   # غيّرها: اسم حسابك/اسم المستودع
+  repo: MoatasemTAlmasani/moatasem   # غيّرها: اسم حسابك/اسم المستودع
   branch: main
 
 media_folder: assets/uploads
