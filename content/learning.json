@@ -6,12 +6,27 @@
         "en": "Structured CCNA 1–3 study path"
       },
       "status": {
-        "ar": "قيد التنفيذ",
-        "en": "In progress"
+        "ar": "مكتمل",
+        "en": "Completed"
       },
       "text": {
         "ar": "دراسة منهج CCNA 1–3 كاملاً بهدف تصميم الشبكات وإعدادها واستكشاف أعطالها، وليس اجتياز الاختبار فقط، مع تطبيق عملي في Cisco Packet Tracer أو GNS3 أو EVE-NG.",
         "en": "Studying the full CCNA 1–3 curriculum to be able to design, configure and troubleshoot networks, not only to pass the exam, with hands-on practice in Cisco Packet Tracer, GNS3 or EVE-NG."
+      },
+      "state": "progress"
+    },
+    {
+      "title": {
+        "ar": "ويندوز سيرفر 2024",
+        "en": "Windows Server 2024"
+      },
+      "status": {
+        "ar": "قيد الإنتهاء",
+        "en": "In Prograss"
+      },
+      "text": {
+        "ar": "دراسة منهج MCSA كاملاً بهدف إدارة الصلاحيات والمستخدمين  وإعدادها واستكشاف أعطالها،  مع تطبيق عملي في VM ware",
+        "en": "Studying the complete MCSA curriculum—covering the management, configuration, and troubleshooting of user accounts and permissions—with practical application using VMware."
       },
       "state": "progress"
     },
